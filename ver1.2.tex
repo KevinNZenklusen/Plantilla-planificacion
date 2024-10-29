@@ -59,7 +59,7 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 5 inclusive                & {día} de {mes} de 202X \\ \hline
+1      & Se completa hasta el punto 5 inclusive                & 29 de octubre de 2024 \\ \hline
 %2      & Se completa hasta el punto 9 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de una caldera industrial}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de una app para smartphones que permite controlar el cursor del mouse en PC con SO Windows 10/11 en fomra inalámbrica. El trabajo tendrá un presupuesto preliminar estimado de 600 horas, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,7 +106,7 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-El proyecto propone el desarrollo de un sistema innovador que permite a los usuarios interactuar con pantallas LED utilizando la cámara de un smartphone para apuntar y controlar el puntero del mouse. Con aplicaciones orientadas principalmente al ámbito de videojuegos de disparos, como Duck Hunt (Figura \ref{duckHunt}) o House of the Dead, este sistema busca emular la funcionalidad de las clásicas lightguns (Figura \ref{lightgun}), adaptándola a tecnologías de visualización modernas, específicamente las pantallas LED. Aprovechando algoritmos de visión por computadora en los dispositivos móviles, el sistema permitirá identificar la ubicación de la pantalla y realizar interacciones precisas en la misma mediante gestos en el smartphone.
+El proyecto propone el desarrollo de un sistema que permite a los usuarios interactuar con pantallas LED utilizando la cámara de un smartphone para apuntar y controlar el puntero del mouse. Con aplicaciones orientadas principalmente al ámbito de videojuegos de disparos, como Duck Hunt (Figura \ref{duckHunt}) o House of the Dead, este sistema busca emular la funcionalidad de las clásicas lightguns (Figura \ref{lightgun}), adaptándola a tecnologías de visualización modernas, específicamente las pantallas LED. Aprovechando algoritmos de visión por computadora en los dispositivos móviles, el sistema permitirá identificar la ubicación de la pantalla y realizar interacciones precisas en la misma mediante gestos en el smartphone.
 
 \begin{figure}[H]
 \centering 
@@ -122,20 +122,20 @@ El proyecto propone el desarrollo de un sistema innovador que permite a los usua
     \label{lightgun}
 \end{figure}
 
-Las "lightguns" fueron dispositivos creados para ampliar la interacción con los videojuegos, permitiendo una experiencia de disparo inmersiva en pantallas CRT al detectar de manera precisa la dirección en que el usuario apuntaba un periférico con forma de arma. Sin embargo, el principio de funcionamiento de las pantallas LED difiere del de las CRT, por lo que la tecnología de las "lightguns" no es directamente aplicable. Actualmente, existen algunos dispositivos que utilizan sensores de movimiento o cámaras externas para realizar tareas de detección de puntería, aunque estos suelen ser costosos o requieren configuraciones complejas. Frente a este panorama, el proyecto propone una solución más accesible y fácil de configurar, integrando el uso de smartphones y los sensores que ya poseen, lo que reduce la necesidad de hardware adicional.
+Las "lightguns" fueron dispositivos creados para ampliar la interacción con los videojuegos, permitiendo una experiencia de disparo inmersiva en pantallas CRT al detectar de manera precisa la dirección en que el usuario apuntaba un periférico con forma de pistola. Sin embargo, el principio de funcionamiento de las pantallas LED difiere del de las CRT, por lo que la tecnología de las "lightguns" no es directamente aplicable. Actualmente, existen algunos dispositivos que utilizan sensores de movimiento o cámaras externas para realizar tareas de detección de puntería, aunque estos suelen ser costosos o requieren configuraciones complejas. Frente a este panorama, el proyecto propone una solución más accesible y fácil de configurar, integrando el uso de smartphones y los sensores que ya poseen, lo que elimina la necesidad de hardware adicional.
 
-Para el funcionamiento inicial del sistema, se propone desarrollar una aplicación para smartphone que ejecute la detección de la pantalla LED y procese la información de ubicación del punto de puntería. Los datos obtenidos serán enviados a una computadora con sistema operativo Windows, la cual interpretará esta información y permitirá controlar el movimiento del puntero del mouse en la pantalla de la PC. Adicionalmente, se implementarán funciones para realizar clic derecho e izquierdo mediante toques en la pantalla del teléfono, proporcionando una experiencia de interacción completa.
+Para el funcionamiento inicial del sistema, se propone desarrollar una aplicación para smartphone que ejecute la detección de la pantalla LED y procese la información de ubicación del punto de puntería. Los datos obtenidos serán enviados a una computadora con sistema operativo Windows 10/11, la cual interpretará esta información y permitirá controlar el movimiento del puntero del mouse en la pantalla de la PC. Adicionalmente, se implementarán funciones para realizar clic derecho e izquierdo mediante toques en la pantalla del teléfono, proporcionando una experiencia de interacción completa.
 
 El sistema propuesto destaca al ofrecer una alternativa económica y adaptable a distintos tamaños y resoluciones de pantallas LED, utilizando un smartphone como controlador interactivo en lugar de hardware especializado. Los principales desafíos del proyecto incluyen la precisión en la detección de la pantalla, el cálculo de posición relativo en tiempo real y la transmisión inalámbrica de datos para que el sistema responda de manera fluida y sin retrasos notables. Estos desafíos se abordarán mediante la implementación de algoritmos de visión por computadora para identificar la pantalla y se considerará el uso de sensores de movimiento del smartphone para mejorar la exactitud de los movimientos del puntero.
 
-El proyecto se basa en el desarrollo de un sistema que combina la detección de objetos y el uso de sensores de movimiento. Los principales componentes y funcionalidades del sistema incluyen:
+Los principales componentes y funcionalidades del sistema incluyen:
 \begin{itemize}
 \item Detección de pantalla LED: El sistema debe reconocer la pantalla en la imagen capturada por la cámara del smartphone mediante técnicas de visión por computadora y delimitarla con un "bounding box".
 \item Detección de puntería: Se evaluará si el centro de la imagen capturada por la cámara está dentro del "bounding box", lo que indicará si el usuario está apuntando hacia la pantalla.
-\item Cálculo de posición relativa: Cuando el smartphone esté apuntando a la pantalla, se calculará la posición exacta donde el usuario está mirando dentro de la pantalla mediante proporcionalidad.
-\item Envío de datos: La información de la ubicación del punto será enviada a una computadora mediante una conexión inalámbrica, pudiendo ser una conexión WiFi o Bluetooth. Los datos enviados serán recibidos por un software específico en el PC que moverá el puntero del mouse en la pantalla en la posición calculada.
-\item Interacción adicional: Los sensores de movimiento del smartphone proporcionarán información adicional sobre la orientación del dispositivo para mejorar la precisión.
-\item Funcionalidad de click: El sistema permitirá simular el "click" del mouse mediante el toque en la pantalla del smartphone.
+\item Cálculo de posición relativa: Cuando el smartphone esté apuntando a la pantalla, se calculará la posición exacta donde el usuario está mirando dentro de la misma mediante proporcionalidad.
+\item Interacción adicional: Las interacciones con la pantalla táctil del teléfono generarán información adicional que será utilizada para el control de la PC. Se considerará el uso de los sensores de movimiento del smartphone para mejorar la precisión.
+\item Envío de datos: La información de la ubicación del punto y los datos agregados serán enviados a una computadora mediante una conexión inalámbrica, pudiendo ser una conexión WiFi o Bluetooth. Serán recibidos por un software específico en el PC que moverá el puntero del mouse en la pantalla en la posición calculada.
+\item Funcionalidad de click: El sistema permitirá simular el 'click' del mouse mediante el toque en la pantalla del smartphone.
 \end{itemize}
 
 En la figura \ref{diagBloq} se presenta el diagrama en bloques del sistema. Se observa que los datos de posición obtenidos por la cámara se procesan para identificar la ubicación de la pantalla y, posteriormente, para transmitir la información a la computadora.
@@ -203,6 +203,7 @@ El presente proyecto no incluye:
 	\item Desarrollo de videojuegos específicos o contenido adicional más allá de la funcionalidad principal. 
 	\item Mantenimiento o actualizaciones de la aplicación. 
 	\item Garantía de rendimiento en todos los tipos de pantallas LED existentes en el mercado. 
+	\item Garantía de rendimiento en todas las PCs existentes en el mercado.
 	\item Garantía de funcionamiento en todos los smartphones existentes en el mercado.
 \end{itemize}
 
